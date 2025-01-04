@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My resume</title>
+    <link rel="stylesheet" href="curriculo.css">
+    <script defer src="curriculo.js"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Heebo:wght@100..900&family=Kalam:wght@300;400;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="top"></div>
+    <header>
+        <div class="navbar">
+            
+            <div class="logo">
+                <p>RenanNaves</p>
+            </div>
+            
+                <button id="menuToggle" class="menu-toggle">☰</button>
+            <nav class="nav-links" id="navLinks">
+                <ul>
+                    <li><a href="../index.html" id="home">Home</a></li>
+                    <li><a href="../index.html" id="about">About</a></li>
+                    <li><a href="../index.html" id="projects">Projects</a></li>
+                    <li><a href="../index.html" id="contact">Contact</a></li>
+                    <li>
+                        <a href="#"><img id="ptImage" src="../images/PT.svg" alt="Portuguese" style="cursor: pointer;" onclick="toggleLanguage()"></a>
+                        <a href="#"><img id="enImage" src="../images/EN.svg" alt="English" style="cursor: pointer; display: none;" onclick="toggleLanguage()"></a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        
+        
+    </header>
+
+    <main>
+    <div class="site">
+        <div class="projects" id="projects">
+            <div class="title">
+               <div class="arrow">
+                <a href="../index.html"><img src="../images/State=Hover, Variant=On surface.png" alt="back arrow" class="back-arrow"></a>
+                <h1 class="project-title" id="projectsTitle">Certificates</h1>
+            </div>
+                <h2 id="projectsHeader">Take a look at my certificates!</h2>
+            </div>
+            <div class="allCards">
+                <!-- Certificado SAGA -->
+                <div class="cards-projects">
+                    <div class="faq" onclick="openModal(['../images/certificado SAGA.jpeg'])">
+                        <h3 id="faq">SAGA</h3>
+                        <img src="../images/certificado SAGA.jpeg" alt="FAQ" class="faq-image">
+                    </div>
+                </div>
+                
+                <!-- Certificado SUPERA -->
+                <div class="cards-projects">
+                    <div class="form" onclick="openModal(['../images/certificado SUPERA 1.jpeg', '../images/certificado SUPERA 2.jpeg'])">
+                        <h3 id="form">SUPERA</h3>
+                        <img src="../images/certificado SUPERA 1.jpeg" alt="FORM" class="form-image">
+                    </div>
+                </div>
+                
+                <!-- Certificado Frontbase -->
+                <div class="cards-projects">
+                    <div class="landing-page" onclick="openModal(['../images/Captura de tela 2024-12-13 082826.png'])">
+                        <h3 id="ld">Frontbase</h3>
+                        <img src="../images/Captura de tela 2024-12-13 082826.png" alt="Frontbase" class="landing-image">
+                    </div>
+                </div>
+                
+                <!-- Modal -->
+                <div id="modal" class="modal">
+                    <div class="modal-content">
+                        <button class="prev" onclick="changePage(-1)">&#8249;</button>
+                        <img id="modal-image" src="" alt="Imagem Ampliada" onclick="toggleZoom()"> <!-- Adicionando o clique para zoom -->
+                        <button class="next" onclick="changePage(1)">&#8250;</button>
+                        <button class="close-modal" onclick="closeModal()">×</button>
+                    </div>
+                </div>
+                
+    
+    <!-- Modal Reutilizável -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <button class="prev" onclick="changePage(-1)">&#8249;</button>
+            <img id="modal-image" src="" alt="Imagem Ampliada">
+            <button class="next" onclick="changePage(1)">&#8250;</button>
+            <button class="close-modal" onclick="closeModal()">X</button>
+        </div>
+     </div>
+     </div>   
+ </div>
+</main>
+<footer>
+    <div class="final">
+        <div class="final-p"> 
+        <p id="figma">Renan Naves 2024 - Layout inspired  by <br> Figma templates</p>
+    </div>
+       
+</div>
+
+</footer>
+<a href="#" id="scrollToTop" class="scroll-top-arrow">
+    <img src="../images/State=Default, Variant=On surface.png" alt="Voltar ao topo" class="arrow-up">
+</a>
+</body>
+ </html>
